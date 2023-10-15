@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            quiz App
+        </title>
+        <link rel="stylesheet" href="question_ui.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body onload="api()">
+        <div class="app">
+            <h1>Quiz</h1>
+            <p class="time"><span id="time"></span></p>
+
+            <div class="quiz">
+                <h2 id="question">question will be displayed here</h2>
+                <div id="answer-btn">
+                    <button class="btn">number1</button>
+                    <button class="btn">number2</button>
+                    <button class="btn">number3</button>
+                    <button class="btn">number4</button>
+                </div>
+                <div>
+                    <button id="nxt-btn">Next</button>
+                    <button id="pa-btn" onclick="api()">Play Again!</button>
+                    <button id="back-btn" onclick="window.location.href = 'page2.html'">Back</button>
+                </div>
+            </div>
+        </div>
+        <div class="time-up" id="timeUp">
+            Time Up!!!
+        </div>
+        <button id="end-quiz" onclick="endQuiz()">End Quiz</button>
+        <div class="loading">
+            <i class="fa fa-spinner fa-spin" style="font-size:56px; color:blue"></i>
+        </div>
+        <script src="question.js"></script>
+    </body>
+</html>

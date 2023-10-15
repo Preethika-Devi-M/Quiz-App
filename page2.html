@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Quiz App</title>
+        <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .flex-container{
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-top: 270px ;
+        }
+        .flex-box{
+            width: 250px;
+            position: relative;
+            height: 250px;
+            background: #c7d3dd;
+            font-size: 25px;
+            text-align: center;
+            border-radius: 20px;
+            margin: 10px;
+            transition: 1s;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .flex-box p{
+            position: absolute;
+            bottom: 30px;
+            display: none;
+            color: #fff;
+        }
+
+        .flex-box:hover{
+            transform: scale(1.05);
+            background-color: #2B4162;
+            color: #fff;
+            box-shadow: 2px 2px 2px #000;
+            z-index: 1;
+        }
+
+        .flex-box:hover p{
+            display: block;
+            transition-duration: 0.5s;
+        }
+
+        .list{
+            list-style-type: none;
+            margin: 0;
+            padding: 5px;
+            overflow: hidden;
+            background-color: #37393a;
+            position: fixed;
+            top:0;
+            width: 100%;
+        }
+        .list-element{
+            float: right;
+        }
+        .list-element a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px 20px;
+            text-decoration: none;
+        }
+
+        .list-element a:hover{
+            background-color: #c7d3dd;
+        }
+
+        </style>
+    </head>
+    <body>
+        <ul class="list">
+            <li class="list-element"><a class="active" href="#home">Home</a></li>
+            <li class="list-element"><a href="#news">News</a></li>
+            <li class="list-element"><a href="#contact">Contact</a></li>
+            <li class="list-element"><a href="#about">About</a></li>
+        </ul>
+          
+        <div class="flex-container">
+            <a class="flex-box"  href="question_ui.html?category=19">Math<p>Play Now!</p></a>
+            <a class="flex-box"  href="question_ui.html?category=18">Technical
+                <p>Play Now!</p>
+            </a>
+            <a class="flex-box" href="question_ui.html?category=9">
+                General Knowledge
+                <p>Play Now!</p>
+            </a>
+            <a class="flex-box"  href="question_ui.html?category=21">Sports
+                <p>Play Now!</p>
+            </a>
+
+        </div>
+        
+        <script src="question.js"
+    ></script>
+    </body>
+</html>
